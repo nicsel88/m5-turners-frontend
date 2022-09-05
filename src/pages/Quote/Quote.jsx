@@ -1,8 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Quote = () => {
   return (
-    <div>Quote</div>
+    <div>
+
+      <Outlet/>
+    </div>
   )
 }
 

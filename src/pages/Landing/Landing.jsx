@@ -1,8 +1,9 @@
 import React from 'react'
+import styles from './Landing.module.css'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <div className={styles.div}>Landing</div>
   )
 }
 
