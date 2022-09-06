@@ -1,0 +1,81 @@
+.hero {
+    font-family: poppins;
+
+    position: relative;
+    height: 84vh;
+    background: url(../../../images/hero-background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.overlay {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vh;
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    left: 10%;
+    top:15%;
+
+    /* background-color: aqua; */
+    color: #FFFFFF;
+}
+
+.overlay h1 {
+
+    /* Heading/H1 */
+    text-align: start;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    /* or 140% */
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.overlay p {
+    width: 80%;
+    text-align: start;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    /* or 150% */
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.overlay button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 40px;
+
+    color: #FFFFFF;
+    background: #0076BD;
+    border-radius: 25px;
+    border-style: none;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}

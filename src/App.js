@@ -5,6 +5,8 @@ import WrapUp from './pages/WrapUp/WrapUp.jsx';
 import Error from './pages/Error/Error.jsx'
 import './App.css';
 
+import "@fontsource/poppins";
+
 function App() {
   return (
     <div className="App">
