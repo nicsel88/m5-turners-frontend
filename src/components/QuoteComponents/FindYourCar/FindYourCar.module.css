@@ -1,0 +1,83 @@
+.CarDetails {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 846px;
+    height: 583px;
+    top: 268px;
+
+    background: #FFFFFF;
+    /* card */
+
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02),
+    66px 136px 91px rgba(16, 38, 70, 0.05),
+    30px 61px 67px rgba(16, 38, 70, 0.09),
+    7px 15px 37px rgba(16, 38, 70, 0.1),
+    0px 0px 0px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+}
+
+.Title {
+        position:relative;
+        height: 28px;
+    
+        /* h4 */
+    
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27.648px;
+        line-height: 32px;
+        /* or 116% */
+    
+        display: flex;
+        align-items: center;
+    
+        color: #414750;
+}
+
+.InputSection {
+    position: relative;
+}
+
+.InputLine {
+    position: relative;
+}
+
+.ToggleSearch {
+    cursor: pointer;
+}
+
+
+.Next {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 11px 73px;
+    gap: 10px;
+
+    position: absolute;
+    width: 188px;
+    height: 46px;
+    left: 618px;
+    top: 732px;
+
+    background: #0076BD;
+    border-radius: 25px;
+}
+
+.OptionToggle1 {
+    cursor: pointer;
+    color: green;
+}
+
+.OptionToggle2 {
+    cursor: pointer;
+    color: red;
+}
+
+.Button {
+    cursor: pointer;
+}
