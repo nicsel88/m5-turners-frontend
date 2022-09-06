@@ -8,6 +8,8 @@ import ChoosePlan from './components/QuoteComponents/ChoosePlan/ChoosePlan.jsx'
 import Error from './pages/Error/Error.jsx'
 import './App.css';
 
+import "@fontsource/poppins";
+
 function App() {
   return (
     <div className="App">
