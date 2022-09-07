@@ -41,10 +41,12 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
               className="infoInput"
               ref={query}
             />
+            <div className={styles.Button} onClick={() => handleSearch()}>Search</div>
           </div>
-          <div className={styles.Button} onClick={() => handleSearch()}>Search</div>
-          <span>Don't know your registration?</span>
-          <span className={styles.ToggleSearch} onClick={() => setSearch(false)}>Enter your car's details</span>  
+          <div className={styles.InputLine}>
+            <label>Don't know your registration?</label>
+            <span className={styles.ToggleSearch} onClick={() => setSearch(false)}>Enter your car's details</span>  
+          </div>
           </>
         ) : (
             <>

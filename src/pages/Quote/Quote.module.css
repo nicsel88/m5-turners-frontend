@@ -1,4 +1,30 @@
-.QuoteContainer {
-    display: flex;
-    justify-content: center;
+.container {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 16vh 10vh auto 10vh;
+    grid-template-areas: 
+    "header header header"
+    ". progress ."
+    ". card ."
+    "footer footer footer"
+    ;
+
 }
+.Navbar {
+    grid-area: header;
+    background-color: grey;
+}
+.ProgressBar {
+    grid-area: progress;
+    background-color: green;
+}
+.main-card {
+    grid-area: card;
+    background-color: brown;
+    align-items: center;
+}
+.Footer {
+    grid-area: footer;
+    background-color: blue;
+}
+
