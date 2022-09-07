@@ -6,6 +6,9 @@ name: Deploy to Firebase Hosting on merge
   push:
     branches:
       - main
+env:
+  CI: false # Prevents fail on warnings.
+  
 jobs:
   sonarcloud:
       runs-on: ubuntu-latest
