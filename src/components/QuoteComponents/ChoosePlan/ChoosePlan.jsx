@@ -4,6 +4,11 @@ import {useState} from 'react'
 
 const ChoosePlan = ({ step, setStep, data, setData, handleChange }) => {
   const [plan, setPlan] = useState(2)
+  const excessOptions = [100, 300, 500, 1000, 2000]
+  const [excess, setExcess] = useState(500)
+  const valueOptions = [4000, 9000, 15000]
+  const [value, setValue] = useState(9000)
+
   return (
     <div className={styles.InputSection}>
       <div className={styles.PlanCardContainer}>
@@ -18,6 +23,34 @@ const ChoosePlan = ({ step, setStep, data, setData, handleChange }) => {
         </div>
       </div>
       <div className={styles.SliderCard}>
+        <div className={styles.ExcessSliderLine}></div>
+        <div className={styles.CirclesContainer}>
+          {excessOptions.map((option, index) => {
+            return (
+            <div className={excess === option ? styles.ActiveCircle : styles.Circle} key={index}
+              onClick={() => { setExcess(option); setData({ ...data, excess: option }) }}>
+                <div className={styles.CircleText}>${option}</div>
+            </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className={styles.SliderCard}>
+        <div className={styles.ActiveValueSliderLine}></div>
+        <div className={value === 9000 || value === 15000 ? styles.ActiveValueSliderLine : styles.ValueSliderLine}></div>
+        <div className={value === 15000 ? styles.ActiveValueSliderLine : styles.ValueSliderLine}></div>
+        <div className={styles.CirclesContainer}>
+          {valueOptions.map((option, index) => {
+            return (
+              <div className={value === option ? styles.ActiveCircle : styles.Circle} key={index}
+                onClick={() => { setValue(option); setData({ ...data, value: option }) }}>
+                <div className={styles.CircleText}>${option}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <div className={styles.CheckboxCard}>
         
       </div>
     </div>

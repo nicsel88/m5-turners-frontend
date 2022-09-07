@@ -9,8 +9,8 @@ const Quote = () => {
   const [step, setStep] = useState(1)
   const [data, setData] = useState({
     make: "", model: "", year: null, enginecap: null, business: true, address: "", startdate: "",
-    d1firstname: "", d1lastname: "", d1gender: "female", d1birthday: "", d1incidents: true, d1licence: "", d1policyhold: '', email: "", phone: "",
-    plan: '', excess: null, value: null, extras: []
+    d1firstname: "", d1lastname: "", d1gender: "female", d1birthday: "YYYY-MM-DD", d1incidents: true, d1licence: "", d1policyhold: '', email: "", phone: "",
+    plan: '', excess: 500, value: 9000, extras: []
   })
   
   console.log(data);
