@@ -3,7 +3,7 @@ import styles from './FindYourCar.module.css'
 import { useState, useRef } from 'react'
 import axios from 'axios'
 
-const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
+const FindYourCar = ({ setStep, data, setData, handleChange }) => {
   const [business, setBusiness] = useState(true)
   const [search, setSearch] = useState(true)
   const query = useRef()
@@ -84,7 +84,7 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
               <div className={styles.InputLine}>
                 <label for="enginecap">Engine Capacity</label>
                 <input
-                  type="text"
+                  type="number"
                   placeholder="1.3"
                   className="infoInput"
                   name="enginecap"

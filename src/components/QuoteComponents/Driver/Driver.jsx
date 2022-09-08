@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Driver.module.css'
 import { useState } from 'react'
 
-const Driver = ({ step, setStep, data, setData, handleChange }) => {
+const Driver = ({ setStep, data, setData, handleChange }) => {
   const [gender, setGender] = useState('female');
   const [incidents, setIncidents] = useState(true);
   const [driver2, setDriver2] = useState(false);

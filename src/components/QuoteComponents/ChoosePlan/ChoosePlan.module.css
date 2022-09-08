@@ -90,7 +90,25 @@
 }
 
 .CheckboxCard {
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 300px;
+
+    background: #FFFFFF;
+    /* card */
+
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+}
+
+.ButtonLine {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .Button {
