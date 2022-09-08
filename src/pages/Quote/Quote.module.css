@@ -1,11 +1,12 @@
 .container {
     display: grid;
     grid-template-columns: 10vw auto 10vw;
-    grid-template-rows: 16vh 10vh auto auto;
+    grid-template-rows: 16vh 10vh auto auto auto;
     grid-template-areas: 
     "header header header"
     ". progress ."
     ". card ."
+    "banner banner banner"
     "footer footer footer"
     ;
 }
@@ -22,6 +23,11 @@
     grid-area: card;
     /* background-color: brown; */
     align-items: center;
+}
+.GetAnswersBanner {
+    grid-area: banner;
+    display: flex;
+    justify-content: flex-end;
 }
 .Footer {
     grid-area: footer;
