@@ -20,8 +20,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/quote" element={<Quote setQuoteData={setQuoteData} />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/summary" element={<Summary />} />
-          <Route path="/purchase" element={<WrapUp quoteData={quoteData} />} />
+          <Route path="/summary" element={<Summary quoteData={quoteData} />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
