@@ -1,4 +1,29 @@
-.QuoteContainer {
-    display: flex;
-    justify-content: center;
+.container {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: 16vh 10vh auto auto;
+    grid-template-areas: 
+    "header header header"
+    ". progress ."
+    ". card ."
+    "footer footer footer"
+    ;
+}
+.Header {
+    grid-area: header;
+    /* align-items: center; */
+    /* background-color: grey; */
+}
+.ProgressBar {
+    grid-area: progress;
+    /* background-color: green; */
+}
+.main-card {
+    grid-area: card;
+    /* background-color: brown; */
+    align-items: center;
+}
+.Footer {
+    grid-area: footer;
+    /* background-color: blue; */
 }
