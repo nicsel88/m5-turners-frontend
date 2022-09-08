@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './ChoosePlan.module.css'
-import {useState} from 'react'
+import { useState } from 'react'
+import bluecheck from '../../../images/blue-check.png'
 
 const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
   const [plan, setPlan] = useState(2);
@@ -24,15 +25,23 @@ const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
 
 
   return (
-    <div className={styles.InputSection}>
+    <>
+    <div className={styles.Title}>Choose your plan</div>
+    <div className={styles.InputSection}>  
       <div className={styles.PlanCardContainer}>
-        <div className={styles.PlanCard}>
+        <div className={styles.PlanCardBack}>
+            <div className={styles.CardTitle}>Third Party, Fire & Theft</div>
+            <div className={styles.CardItem}>
+              <div className={styles.Checkmark}>
+                <img src={bluecheck}/>
+              </div>
+            </div>
           <div className={plan === 1 ? styles.ActiveButton : styles.Button} onClick={() => { setPlan(1); setData({ ...data, plan: 1 }) }}>Plan 1</div>
         </div>
-        <div className={styles.PlanCard}>
+        <div className={styles.PlanCardFront}>
           <div className={plan === 2 ? styles.ActiveButton : styles.Button} onClick={() => { setPlan(2); setData({ ...data, plan: 2 }) }}>Plan 2</div>
         </div>
-        <div className={styles.PlanCard}>
+        <div className={styles.PlanCardBack}>
           <div className={plan === 3 ? styles.ActiveButton : styles.Button} onClick={() => { setPlan(3); setData({ ...data, plan: 3 }) }}>Plan 3</div>
         </div>
       </div>
@@ -83,6 +92,7 @@ const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -3,6 +3,7 @@ import Header from '../../components/QuoteComponents/Header/Header.jsx'
 import FindYourCar from '../../components/QuoteComponents/FindYourCar/FindYourCar.jsx'
 import Driver from '../../components/QuoteComponents/Driver/Driver.jsx'
 import ChoosePlan from '../../components/QuoteComponents/ChoosePlan/ChoosePlan.jsx'
+import GetAnswersBanner from '../../components/QuoteComponents/GetAnswersBanner/GetAnswersBanner.jsx'
 import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
 import { useState } from 'react'
 import styles from './Quote.module.css'
@@ -51,6 +52,7 @@ const Quote = ({ setQuoteData }) => {
       <div className={styles['Header']}><Header /></div>
       <div className={styles['ProgressBar']}> hi </div>
       <div className={styles['main-card']}>{stepSwitch(step)}</div>
+      <div className={styles['GetAnswersBanner']}> <GetAnswersBanner /> </div>
       <div className={styles['Footer']}><Footer /> </div>
     </div>
 

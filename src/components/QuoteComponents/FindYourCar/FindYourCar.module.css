@@ -45,7 +45,6 @@
     padding-left: 2.5rem;
     box-sizing: border-box;
 }
-
 .InputLine {
     position: relative;
     height: 5rem;
@@ -77,6 +76,7 @@
 .InputLine input {
     width: 13rem;
 }
+
 
 .ToggleSearch {
     letter-spacing: -0.01em;
