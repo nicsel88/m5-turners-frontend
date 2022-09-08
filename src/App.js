@@ -15,8 +15,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/success" element={<Success quoteData={quoteData} />} />
-          <Route path="/summary" element={<Summary quoteData={quoteData}/>} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/summary" element={<Summary />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
