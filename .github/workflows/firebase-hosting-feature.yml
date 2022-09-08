@@ -6,6 +6,10 @@ name: Test and build on feature branch push
   push:
     branches:
       - feature/*
+
+env:
+  CI: false # Prevents fail on warnings.
+
 jobs:
   sonarcloud:
       runs-on: ubuntu-latest
