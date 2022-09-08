@@ -72,7 +72,7 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
                   value={data.model}
                 />
               </div>
-              <div className="InputLine">
+              <div className={styles.InputLine}>
                 <label for="year">Year</label>
                 <input
                   type="text"
@@ -94,10 +94,10 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
                   value={data.enginecap}
                 />
               </div>
-              <div>
-                <span>Don't know these details?</span>
+              <div className={styles.InputLine}>
+                <label class>Don't know these details?</label>
                 <span className={styles.ToggleSearch} onClick={() => setSearch(true)}>Try entering vehicle registration</span>
-              </div>  
+              </div>
           </>
         )}
           
