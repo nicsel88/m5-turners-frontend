@@ -1,7 +1,9 @@
 import React from 'react'
+import Header from '../../components/QuoteComponents/Header/Header.jsx'
 import FindYourCar from '../../components/QuoteComponents/FindYourCar/FindYourCar.jsx'
 import Driver from '../../components/QuoteComponents/Driver/Driver.jsx'
 import ChoosePlan from '../../components/QuoteComponents/ChoosePlan/ChoosePlan.jsx'
+import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
 import { useState } from 'react'
 import styles from './Quote.module.css'
 import axios from 'axios'
@@ -15,6 +17,7 @@ const Quote = ({ setQuoteData }) => {
   })
   
   // console.log(data);
+
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -43,9 +46,14 @@ const Quote = ({ setQuoteData }) => {
   }
 
   return (
-    <div className={styles.QuoteContainer}>
-          {stepSwitch(step)}
+    <div className={styles.container}>
+      
+      <div className={styles['Header']}><Header /></div>
+      <div className={styles['ProgressBar']}> hi </div>
+      <div className={styles['main-card']}>{stepSwitch(step)}</div>
+      <div className={styles['Footer']}><Footer /> </div>
     </div>
+
   )
 }
 
