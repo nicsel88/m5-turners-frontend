@@ -1,0 +1,83 @@
+.somethingElse {
+    width: 100%;
+    margin: 4rem 0; /* 4rem top/bottom, 0 on left/right */
+    text-align: center;
+    position: absolute;
+}
+
+.container {
+    /* Frame 147 */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+padding: 0px;
+gap: 30px;
+
+position: absolute;
+height: 441px;
+left: 80px;
+right: 80px;
+top: 791px;
+}
+
+.container img {
+    width: 100%;
+    filter: drop-shadow(118px 242px 108px rgba(16, 38, 70, 0.02)) drop-shadow(66px 136px 91px rgba(16, 38, 70, 0.05)) drop-shadow(30px 61px 67px rgba(16, 38, 70, 0.09)) drop-shadow(7px 15px 37px rgba(16, 38, 70, 0.1)) drop-shadow(0px 0px 0px rgba(16, 38, 70, 0.1));
+}
+
+
+
+.somethingElse h3 {
+    position: absolute;
+    width: 558px;
+    height: 56px;
+    left: 454px;
+    top: 671px;
+    
+    /* H3 */
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 39.81px;
+    line-height: 56px;
+    /* identical to box height, or 141% */
+    
+    text-align: center;
+    
+    color: #0076BD;
+}
+
+.container h4 {
+    display: grid; /* display as a grid format */
+    grid-template-columns: repeat(4,1fr); /* display 4 columns, equal width. Fr is a flexible unit. */
+    grid-gap: 1.2rem; /* gap between each image */
+    padding: 1rem;
+    width: 260px;
+
+height: 32px;
+
+/* h4 */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 27.648px;
+line-height: 32px;
+/* identical to box height, or 116% */
+
+
+color: #414750;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}

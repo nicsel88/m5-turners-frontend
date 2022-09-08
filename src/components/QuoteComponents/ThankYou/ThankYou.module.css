@@ -1,0 +1,92 @@
+.hero {
+    font-family: poppins;
+    height: 60vh;
+    width: 100%;
+    position: relative; /* important because there will be an image  */
+    margin-bottom: 4rem;
+
+}
+
+.hero:before { /* insert image before the hero element */
+    content: '';
+    background: url('../../../images/success-page/success-hero.png') no-repeat center center/cover;
+    height: 100%; /* of the parent container */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.overlay {
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 95rem;
+    height: 35rem;
+    left: calc(50% - 774px/2);
+    top: 5rem;
+    
+    border: 3px solid #F3F4F5;
+    border-radius: 4px;
+    align-items: center;
+    
+}
+
+.overlay img {
+    padding-top: 1rem;
+
+}
+
+.overlay h3 {
+
+   /* H3 */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 39.81px;
+line-height: 5rem;
+/* identical to box height, or 141% */
+
+text-align: center;
+
+color: #F3F4F5;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.overlay p {
+/* Your policy has been sent to your email. */
+
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 27.648px;
+line-height: 32px;
+text-align: center;
+
+/* or 116% */
+
+display: flex;
+align-items: center;
+
+color: #F3F4F5;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
