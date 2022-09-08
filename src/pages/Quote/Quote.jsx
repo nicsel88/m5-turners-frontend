@@ -61,9 +61,6 @@ const Quote = () => {
       <div className={styles['ProgressBar']}> hi </div>
       <div className={styles['main-card']}>{stepSwitch(step)}</div>
       <div className={styles['Footer']}><Footer /> </div>
-      {/* <Navbar />
-      
-      <Footer /> */}
     </div>
 
   )
