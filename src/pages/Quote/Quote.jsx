@@ -13,8 +13,8 @@ const Quote = ({ setQuoteData }) => {
   const [step, setStep] = useState(1)
   const [data, setData] = useState({
     make: "", model: "", year: null, enginecap: 2788, business: true, address: "", startdate: "",
-    d1firstname: "", d1lastname: "", d1gender: "female", d1birthday: "YYYY-MM-DD", d1incidents: true, d1licence: "", d1policyhold: '', email: "", phone: "",
-    plan: '', excess: 500, value: 9000, extras: []
+    d1firstname: "Betty", d1lastname: "Barney", d1gender: "female", d1birthday: "YYYY-MM-DD", d1incidents: true, d1licence: "", d1policyhold: '', email: "betty@barney.com", phone: "",
+    plan: 2, excess: 500, value: 9000, extras: [true, false, true],
   })
   
   // console.log(data);

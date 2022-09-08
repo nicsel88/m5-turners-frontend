@@ -1,0 +1,363 @@
+
+.background:before { /* insert image before the hero element */
+    content: '';
+    background: url('../../../images/summary-page/background.png') no-repeat center center/cover;
+    height: 100%; /* of the parent container */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+.car img{
+    padding-top: 5.8rem;
+    padding-left: 28rem;
+}
+
+
+.quoteCard {
+    box-sizing: border-box;
+    position: relative;
+    width: 60%;
+    height: 50rem;
+    margin: auto;
+    top: 16vh;
+
+    background: #F2F6FC;
+    border: 2px solid #FFFFFF;
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.quoteCard h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 56px;
+    margin-top: 3rem;
+    /* identical to box height, or 141% */
+
+
+    color: #414750;
+}
+
+
+.container {
+    display: grid; /* display as a grid format */
+    grid-template-columns: repeat(2,1fr); /* display 3 columns, equal width. Fr is a flexible unit. */
+    grid-gap: 1.2rem; /* gap between each image */
+
+}
+
+.card1 {
+    box-sizing: border-box;
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+
+    position: absolute;
+    width: 28rem;
+    height: 298px;
+    left: 120px;
+    top: 156px;
+
+    /* Gray/300 */
+
+    border: 1px solid #B1B8D0;
+    border-radius: 20px;
+
+}
+
+.card1 h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27.648px;
+    line-height: 32px;
+    /* identical to box height, or 116% */
+    color: #14181F;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: auto;
+}
+
+.agreedValue {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 176px;
+    width: 400px;
+    height: 34px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.agreedValue p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.addOns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 140px;
+    width: 400px;
+    height: 34px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.addOns p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.card2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 0.1rem;
+    position: absolute;
+    width: 28rem;
+    height: 173px;
+    left: 119px;
+    top: 484px;
+    border: 1px solid #B1B8D0;
+    border-radius: 20px;
+}
+
+.card2 h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #DEA01E;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: auto;
+    margin-left: 0.3rem;
+}
+
+.card2 p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    margin-left: 0.3rem;
+    color: #414750;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.code {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    padding: 0px;
+    gap: 5px;
+    width: 400px;
+    height: 34px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.code p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 10px;
+    color: #0076BD;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.copyApply {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 163px;
+    height: 34px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.copyApply button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 5px;
+    width: 80px;
+    height: 34px;
+}
+
+.card3 {
+    box-sizing: border-box;
+    position: absolute;
+    width: 25rem;
+    height: 499px;
+    left: 585px;
+    top: 158px;
+    border: 1px solid #B1B8D0;
+    border-radius: 20px;
+    margin-left: 0.8rem;
+}
+
+.radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem;
+    gap: 10px;
+    position: absolute;
+    ;
+
+}
+
+.payPeriod {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 1rem;
+    align-items: center;
+    gap: 3rem;
+    width: 529px;
+    height: 72px;
+}
+
+.payPeriod input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border: 1px solid #CECECE;
+    border-radius: 10px;
+    }
+
+.payPeriod h4 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27.648px;
+    line-height: 32px;
+    color: #414750;
+    margin: 0rem;
+}
+
+.card3 button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 40px;
+
+    color: #FFFFFF;
+    background: #0076BD;
+    border-radius: 25px;
+    border-style: none;
+
+    position: absolute;
+    width: 225px;
+    height: 46px;
+    left: 5rem;
+    bottom: 2rem;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+    
+}
+
+.needTime h4 {
+    color: #0076BD;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 32px;
+    margin: 0rem;
+    position: absolute;
+    left: 37.2rem;
+    bottom: 10.4rem;
+
+}
+
+.needTime button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 120px;
+    height: 40px;
+
+    color: #FFFFFF;
+    background: #0076BD;
+    border-radius: 25px;
+    border-style: none;
+
+    position: absolute;
+    width: 225px;
+    height: 46px;
+    left: 38.7rem;
+    bottom: 6.5rem;
+}
