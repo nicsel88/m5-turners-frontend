@@ -18,35 +18,39 @@
 }
 
 .Title {
-        position:relative;
-        height: 1.75;
-        width: 100%;
-        padding: 0.5rem 1rem;
-        box-sizing: border-box;
-        border-bottom: 2px solid #5EAAF6;
-    
-        /* h4 */
-    
-        font-family: 'Poppins';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.7rem;
-        line-height: 2rem;
-    
-        display: flex;
-        align-items: flex-start;
-    
-        color: #414750;
+    position:relative;
+    height: 5.2rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
+    border-bottom: 2px solid #5EAAF6;
+
+    /* h4 */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2rem;
+
+    display: flex;
+    align-items: center;
+
+    color: #414750;
 }
 
 .InputSection {
     position: relative;
+    width: 100%;
+    padding-left: 2.5rem;
+    box-sizing: border-box;
 }
 
 .InputLine {
     position: relative;
     height: 5rem;
-    /* padding: 1.5rem; */
+    gap: 2.5rem;
+    /* padding: 0 2rem 0 0; */
 
     display: flex;
     flex-direction: row;
@@ -54,7 +58,7 @@
     align-items: center;
 }
 .InputLine label {
-    width: 500px;
+    width: 23rem;
 
     display: flex;
     align-items: center;
@@ -69,41 +73,79 @@
 
     font-family: 'Poppins';
     line-height: 1.2rem;
-    
+}
+.InputLine input {
+    width: 13rem;
 }
 
 .ToggleSearch {
+    letter-spacing: -0.01em;
+    text-decoration-line: underline;
+    color: #0076BD;
     cursor: pointer;
 }
 
+.Business {
+    padding: 0.5rem 0;
+    width: auto ;
 
-.Next {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 11px 73px;
-    gap: 10px;
-
-    position: absolute;
-    width: 188px;
-    height: 46px;
-    left: 618px;
-    top: 732px;
-
-    background: #0076BD;
-    border-radius: 25px;
+    border-radius: 1.5rem;
+    border-color: #0076BD;
+    border-width: 1px;
+    overflow: hidden;
 }
-
 .OptionToggle1 {
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    color: green;
+    color: #FFFFFF;
+    background: #0076BD;
+    /* z-index: -1; */
 }
-
 .OptionToggle2 {
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    color: red;
+    color: #0076BD;
+    background: #FFFFFF;
+    /* z-index: -1; */
 }
 
 .Button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+
+    width: auto;
+    color: #FFFFFF;
+    background: #0076BD;
+    border-radius: 25px;
+
     cursor: pointer;
+}
+
+.Next {
+    font-weight: 500;
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 4rem;
+
+    width: auto;
+    color: #FFFFFF;
+    background: #0076BD;
+    border-radius: 25px;
+
+    cursor: pointer;
+}
+.ButtonLine {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2.5rem 2.5rem 0;
+    position: relative;
 }
