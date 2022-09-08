@@ -41,10 +41,12 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
               className="infoInput"
               ref={query}
             />
+            <div className={styles.Button} onClick={() => handleSearch()}>Search</div>
           </div>
-          <div className={styles.Button} onClick={() => handleSearch()}>Search</div>
-          <span>Don't know your registration?</span>
-          <span className={styles.ToggleSearch} onClick={() => setSearch(false)}>Enter your car's details</span>  
+          <div className={styles.InputLine}>
+            <label>Don't know your registration?</label>
+            <span className={styles.ToggleSearch} onClick={() => setSearch(false)}>Enter your car's details</span>  
+          </div>
           </>
         ) : (
             <>
@@ -102,8 +104,8 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
       </div>
       <div className={styles.InputSection}>
         <div className={styles.InputLine}>
-          <span>Will you use this car for business?</span>
-          <div id="business" value={business}>
+          <label>Will you use this car for business?</label>
+          <div id='business' className={styles.Business} value={business}>
             <div className={business ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setBusiness(true); setData({ ...data, business: true }); }}>Yes</div>
             <div className={!business ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setBusiness(false); setData({ ...data, business: false }); }}>No</div>
           </div>
@@ -130,7 +132,7 @@ const FindYourCar = ({ step, setStep, data, setData, handleChange }) => {
           />
         </div>
         <div className={styles.ButtonLine}>
-          <div className={styles.Button} onClick={() => setStep((prev) => prev + 1)}>Next</div>
+          <div className={styles.Next} onClick={() => setStep((prev) => prev + 1)}>Next</div>
         </div>
       </div>
     </div>

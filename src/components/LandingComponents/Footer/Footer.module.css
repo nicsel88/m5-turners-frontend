@@ -1,0 +1,71 @@
+.footer {
+    height: 40vh;
+    font-family: poppins;
+    color: F;
+}
+
+.navigation-background {
+    height: 83%;
+    width: 100%;
+    background: #AFB1B6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation {
+    width: 80%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.navigation ul {
+    list-style-type: none;
+    text-align: start;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+
+    color: #FFFFFF;
+}
+
+.navigation-block-header {
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 2rem;
+    /* identical to box height, or 21px */
+    display: flex;
+    align-items: center;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.banner {
+    height: 17%;
+    background: #61646B;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.banner ul {
+    list-style-type: none;
+    text-align: start;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    display: flex;
+
+}
+.banner li {
+    margin: 0 20px;
+}
