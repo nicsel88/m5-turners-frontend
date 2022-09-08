@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from './pages/Landing/Landing.jsx';
 import Quote from './pages/Quote/Quote.jsx';
-import WrapUp from './pages/WrapUp/WrapUp.jsx';
+import Summary from './pages/Summary/Summary.jsx';
+import Success from './pages/Success/Success.jsx';
 import Error from './pages/Error/Error.jsx'
 import './App.css';
 
@@ -14,13 +15,13 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/purchase" element={<WrapUp />} />
+          <Route path="/success" element={<Success quoteData={quoteData} />} />
+          <Route path="/summary" element={<Summary quoteData={quoteData}/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 
 export default App;
