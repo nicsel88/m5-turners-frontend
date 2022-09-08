@@ -3,23 +3,86 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 3rem;
+}
+
+
+.Title {
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #414750;
+    margin-bottom: 20px;
 }
 
 .PlanCardContainer {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    align-items: center;
 }
 
-.PlanCard {
+.PlanCardBack {
     position: relative;
-        width: 350px;
-        height: 350px;
-    
-        /* card */
-    
-        box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
-            border-radius: 20px;
+    width: 300px;
+    height: 50vh;
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
+
+.PlanCardFront {
+    position: relative;
+    width: 300px;
+    height: 70vh;
+    z-index: 10;
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+
+
+}
+
+.CardTitle {
+    width: 10rem;
+    height: 72px;
+    left: 254.17px;
+    top: 448px;
+
+    /* h4 */
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 32px;
+    /* or 116% */
+
+    text-align: center;
+
+    color: #414750;
+}
+
+.CardItem {
+    display: flex;    
+}
+
+
 
 .SliderCard {
     position: relative;

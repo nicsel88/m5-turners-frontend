@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/QuoteComponents/Navbar/Navbar.jsx'
+// import Navbar from '../../components/QuoteComponents/Navbar/Navbar.jsx'
 import ThankYou from '../../components/QuoteComponents/ThankYou/ThankYou.jsx'
 import LookingForSomethingElse from '../../components/QuoteComponents/LookingForSomethingElse/LookingForSomethingElse.jsx'
 // import Hero from '../../components/QuoteComponents/Hero/Hero.jsx'
@@ -14,7 +14,7 @@ import styles from './Success.module.css'
 const Success = ({quoteData}) => {
   return (
     <div>
-    <Navbar />
+    {/* <Navbar /> */}
     <ThankYou />
     <LookingForSomethingElse />
     <Footer />
