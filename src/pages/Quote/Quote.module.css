@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 10vw auto 10vw;
+    grid-template-columns: auto 970px auto;
     grid-template-rows: 8rem auto auto auto auto;
     grid-template-areas: 
     "header header header"
@@ -25,6 +25,7 @@
 
 .main-card {
     grid-area: card;
+    margin-bottom: 5rem;
     /* background-color: brown; */
     align-items: center;
 }
