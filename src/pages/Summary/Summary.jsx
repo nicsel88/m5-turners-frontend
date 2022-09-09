@@ -7,6 +7,7 @@ import styles from './Summary.module.css'
 
 
 
+
 const Summary = ({quoteData}) => {
 
 console.log(quoteData.d1firstname);

@@ -37,7 +37,7 @@
 .PlanCardBack {
     position: relative;
     width: 300px;
-    height: 50vh;
+    height: 37rem;
     box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
     border-radius: 20px;
 
@@ -49,11 +49,17 @@
 
 .PlanCardFront {
     position: relative;
-    width: 300px;
-    height: 70vh;
+    width: 335px;
+    height: 43rem;
     z-index: 10;
     box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: 0 10px 0 10px; */
 
 
 }
@@ -69,8 +75,9 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     line-height: 32px;
+    margin: 45px 0 40px 0;
     /* or 116% */
 
     text-align: center;
@@ -79,86 +86,41 @@
 }
 
 .CardItem {
-    display: flex;    
+    display: flex;
+    justify-content: flex-start; 
+    width: 15rem;
+    gap: .5rem;
+    align-self:flex-start;
+    margin-bottom: 1rem;
+    padding-left: 40px;   
 }
 
+.ItemTextActive {
+    font-size: 1rem;
+    color: #2B2C34;
+    line-height: 24px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+}
 
+.Price {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #565E69;
+    margin-bottom: 20px;
+}
 
 .SliderCard {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-        width: 70%;
-        height: 200px;
-    
-        background: #FFFFFF;
-        /* card */
-    
-        box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
-        border-radius: 20px;
-}
-
-.ExcessSliderLine {
-     position: relative;
-        width: 843px;
-        height: 0px;
-        
-    
-        border: 20px solid rgba(179, 179, 179, 0.5);
-}
-
-.ValueSliderLine {
-   position: relative;
-        width: 281px;
-        height: 0px;
-        border: 20px solid rgba(179, 179, 179, 0.5);
-}
-
-.ActiveValueSliderLine {
-    position: relative;
-    width: 281px;
-    height: 0px;
-    border: 20px solid #DEA01E;
-}
-
-.CirclesContainer {
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-    width: 700px;
-    height: 50px;
-}
-
-.Circle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #565E69;
-    color: black;
-    cursor: pointer;
-}
-
-.ActiveCircle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background: #DEA01E;
-    cursor: pointer;
-}
-
-.CircleText {
-    position: relative;
-    top: 60px;
-}
-
-.CheckboxCard {
-    position: relative;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 70%;
+    gap: 2rem;
+    width: 60rem;
     height: 300px;
 
     background: #FFFFFF;
@@ -168,17 +130,171 @@
     border-radius: 20px;
 }
 
-.ButtonLine {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
+.SliderTitle {
+    position: relative;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin: 50px 0 20px 0;
 }
 
-.Button {
+.SliderGlove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExcessSliderLine {
+     position: relative;
+        width: 700px;
+        height: 0px;
+        border: 7px solid rgba(179, 179, 179, 0.5);
+        border-radius: 10%
+}
+
+.ValueSliderLine {
+   position: relative;
+        width: 160px;
+        height: 0px;
+        border: 7px solid rgba(179, 179, 179, 0.5);
+        border-radius: 10%
+}
+
+.ActiveValueSliderLine {
+    position: relative;
+    width: 160px;
+    height: 0px;
+    border: 7px solid #DEA01E;
+    border-radius: 10%
+}
+
+.CirclesContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 700px;
+    height: 50px;
+}
+
+.Circle {
+    display: flex;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #565E69;
     color: black;
     cursor: pointer;
 }
 
+.ActiveCircle {
+    display: flex;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #DEA01E;
+    cursor: pointer;
+}
+
+.CircleText {
+    position: relative;
+    top: 80px;
+    font-family: 'Poppins';
+    font-size: 1.4rem;
+}
+
+.CheckboxCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 28rem;
+    margin-bottom: 100px;
+
+    background: #FFFFFF;
+    /* card */
+
+    box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1), 0px 0px 0px rgba(16, 38, 70, 0.1);
+    border-radius: 20px;
+}
+
+.CheckboxCard > ul {
+    list-style: none;
+    width: 85%;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+
+.ExtrasList > li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #CECECE;
+    height: 5rem;
+
+    font-size: 1rem;
+    font-family: 'Poppins'
+
+}
+
+.ListItemStart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.ListItemEnd {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Description {
+    display: flex;
+    justify-content: flex-start;
+    width: 20rem;
+}
+
+.Checkbox {
+    border: 1px solid #CECECE;
+}
+
+.ButtonLine {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    color: #0076BD;
+    border: 1.4px solid #0076BD;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
 .ActiveButton {
-    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 2rem;
+    color: white;
+    background: #0076BD;
+    border: 1.4px solid #0076BD;
+    border-radius: 25px;
+    cursor: pointer;
 }
