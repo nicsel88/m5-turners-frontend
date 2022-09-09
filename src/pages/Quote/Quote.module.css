@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 10vw auto 10vw;
-    grid-template-rows: 16vh 10vh auto auto auto;
+    grid-template-rows: 16vh 15vh auto auto auto;
     grid-template-areas: 
     "header header header"
     ". progress ."
@@ -10,15 +10,19 @@
     "footer footer footer"
     ;
 }
+
 .Header {
     grid-area: header;
     /* align-items: center; */
     /* background-color: grey; */
 }
+
 .ProgressBar {
     grid-area: progress;
+    align-items: center;
     /* background-color: green; */
 }
+
 .main-card {
     grid-area: card;
     /* background-color: brown; */
