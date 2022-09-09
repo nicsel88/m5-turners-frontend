@@ -12,6 +12,7 @@ import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
 import styles from './Success.module.css'
 
 const Success = ({quoteData}) => {
+  console.log(quoteData);
   return (
     <div>
     {/* <Navbar /> */}
