@@ -14,7 +14,7 @@ import styles from './Success.module.css'
 const Success = ({quoteData}) => {
   return (
     <div>
-    {/* <Navbar /> */}
+    <Navbar />
     <ThankYou />
     <LookingForSomethingElse />
     <FooterSuccess />

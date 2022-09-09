@@ -15,7 +15,7 @@ const QuoteCard = () => {
                   <h4>Comprehensive Cover</h4>
                   <div className={styles.agreedValue}>
                     <p>Agreed Value:</p>
-                    <p>$9000</p>
+                    <p>$12,000</p>
                   </div>
                   <div className={styles.agreedValue}>
                     <p>Excess Fee:</p>
@@ -45,15 +45,15 @@ const QuoteCard = () => {
                   <div className={styles.radio}>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="monthly" name="payPeriod" />
-                      <h4>Monthly</h4>
+                      <h4>$36 /month</h4>
                     </div>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="quarterly" name="payPeriod" />
-                      <h4>Quarterly</h4>
+                      <h4>$100 /quarter</h4>
                     </div>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="annually" name="payPeriod" />
-                      <h4>Annually</h4>
+                      <h4>$380 /year</h4>
                     </div>
                   </div>
                   

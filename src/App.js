@@ -11,7 +11,7 @@ import './App.css';
 
 function App() {
   const [quoteData, setQuoteData] = useState([]);
-  console.log(quoteData)
+  // console.log(quoteData)
 
   return (
     <div className="App">

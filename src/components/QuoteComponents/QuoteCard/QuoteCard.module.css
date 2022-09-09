@@ -231,6 +231,7 @@
     flex-grow: 0;
 }
 
+
 .copyApply button {
     display: flex;
     flex-direction: row;
@@ -240,6 +241,8 @@
     gap: 5px;
     width: 80px;
     height: 34px;
+
+    cursor: pointer;
 }
 
 .card3 {
@@ -294,7 +297,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 27.648px;
+    font-size: 26px;
     line-height: 32px;
     color: #414750;
     margin: 0rem;
@@ -324,6 +327,8 @@
     flex: none;
     order: 2;
     flex-grow: 0;
+
+    cursor: pointer;
     
 }
 

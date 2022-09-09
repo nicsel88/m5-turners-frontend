@@ -9,9 +9,11 @@ import styles from './Summary.module.css'
 
 const Summary = ({quoteData}) => {
 
-console.log(quoteData.d1firstname);
+  console.log(quoteData);
 
   const handleCheckout = async () => {
+
+    
 
       // Next step: Integrate client and server
     // Make request to server to get URL to checkout page.
@@ -20,15 +22,15 @@ console.log(quoteData.d1firstname);
     // Gets pricing info back from server, gives unique URL to redirect user to checkout and pay.
     //Make fetch request to server to endpoint:
 
-    console.log(quoteData.excess);
-
-    //var itemsArray = [{id: quoteData.plan, excess: quoteData.excess, value: quoteData.value}];
+    var itemsArray = [{id: quoteData.plan, excess: quoteData.excess, value: quoteData.value}];
 
     for(var i=0; i<3; i++) {
      if(quoteData.extras[i] ==true) {
        itemsArray.push({id: i+4})
      }
     }
+
+    // console.log(itemsArray);
 
     // 1. Make request to server at the URL you create
     await fetch("http://localhost:8080/checkout/pay", { // URL of server (Azure deploy) (client and server are on different URLs). Can add this to env variable so I only need to change it in one place.
@@ -39,11 +41,7 @@ console.log(quoteData.d1firstname);
     
     // 2. Send along the id and quantity of items you want to buy (based on planItems map in CheckoutController.js)
         body: JSON.stringify({
-            items: [
-              { id: 2, excess: quoteData.excess, value: quoteData.value }, //choosing Comprehensive plan.
-              { id: 4 }, //choosing bonus cover: mech breakdown.
-              { id: 6 }
-          ],
+            items: itemsArray,
             customer: {
                 name: quoteData.d1firstname + " " + quoteData.d1lastname,
                 email: quoteData.email
@@ -93,7 +91,7 @@ console.log(quoteData.d1firstname);
             items: [
                 { id: 2, excess: quoteData.excess, value: quoteData.value }, //choosing Comprehensive plan.
                 { id: 4 }, //choosing bonus cover: mech breakdown.
-                { id: 6 }
+                // { id: 6 }
             ],
             customer: {
                 name: quoteData.d1firstname + " " + quoteData.d1lastname,

@@ -13,8 +13,8 @@ const Quote = ({ setQuoteData }) => {
   const [step, setStep] = useState(1)
   const [data, setData] = useState({
     make: "", model: "", year: null, enginecap: 2788, business: true, address: "", startdate: "",
-    d1firstname: "Betty", d1lastname: "Barney", d1gender: "female", d1birthday: "YYYY-MM-DD", d1incidents: true, d1licence: "", d1policyhold: '', email: "betty@barney.com", phone: "",
-    plan: 2, excess: 500, value: 9000, extras: [true, false, true],
+    d1firstname: "", d1lastname: "", d1gender: "", d1birthday: "YYYY-MM-DD", d1incidents: true, d1licence: "", d1policyhold: '', email: "", phone: "",
+    plan: "", excess: "" , value: "", extras: [],
   })
   
   // console.log(data);
@@ -52,7 +52,6 @@ const Quote = ({ setQuoteData }) => {
       <div className={styles['Header']}><Header /></div>
       <div className={styles['ProgressBar']}> hi </div>
       <div className={styles['main-card']}>{stepSwitch(step)}</div>
-      <div className={styles['GetAnswersBanner']}> <GetAnswersBanner /> </div>
       <div className={styles['Footer']}><Footer /> </div>
     </div>
 
