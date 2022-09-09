@@ -14,7 +14,7 @@ const LookingForSomethingElse = () => {
               <img src={auction} alt='auction hammer' />
               <img src={boat} alt='sailing boat' />
               <img src={tradeIn} alt='car key' />
-              <img src={carSubscriptions} alt='car key' />
+              <img src={carSubscriptions} alt='car' />
               <h4>Car auctions</h4>
               <h4>Boats & trucks</h4>
               <h4>Trade in</h4>

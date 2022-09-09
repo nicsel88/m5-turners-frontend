@@ -1,5 +1,5 @@
 import React from 'react'
-// import Navbar from '../../components/QuoteComponents/Navbar/Navbar.jsx'
+import Navbar from '../../components/QuoteComponents/Header/Header.jsx'
 import ThankYou from '../../components/QuoteComponents/ThankYou/ThankYou.jsx'
 import LookingForSomethingElse from '../../components/QuoteComponents/LookingForSomethingElse/LookingForSomethingElse.jsx'
 // import Hero from '../../components/QuoteComponents/Hero/Hero.jsx'
@@ -8,7 +8,7 @@ import LookingForSomethingElse from '../../components/QuoteComponents/LookingFor
 // import AvailablePlansOnOffer from '../../components/QuoteComponents/AvailablePlansOnOffer/AvailablePlansOnOffer.jsx'
 // import OptionalExtras from '../../components/QuoteComponents/OptionalExtras/OptionalExtras.jsx'
 // import FrequentlyAskedQuestions from '../../components/QuoteComponents/FrequentlyAskedQuestions/FrequentlyAskedQuestions.jsx'
-import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
+import FooterSuccess from '../../components/QuoteComponents/FooterSuccess/FooterSuccess.jsx'
 import styles from './Success.module.css'
 
 const Success = ({quoteData}) => {
@@ -18,7 +18,7 @@ const Success = ({quoteData}) => {
     {/* <Navbar /> */}
     <ThankYou />
     <LookingForSomethingElse />
-    <Footer />
+    <FooterSuccess />
   </div>
   )
 }
