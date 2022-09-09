@@ -8,6 +8,7 @@ import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
 import { useState } from 'react'
 import styles from './Quote.module.css'
 import axios from 'axios'
+import check from '../../images/smallwhitecheck.png'
 
 const Quote = ({ setQuoteData }) => {
   const [step, setStep] = useState(1)
@@ -29,6 +30,7 @@ const Quote = ({ setQuoteData }) => {
     await axios.post('http://localhost:8080/insurancequotecalculator', data)
       .then((response) => {
         setQuoteData(response.data)
+        window.localStorage.setItem('quoteData', JSON.stringify(response.data));
       })
       .catch((error) => {console.log(error)})
   }
@@ -50,7 +52,7 @@ const Quote = ({ setQuoteData }) => {
     <div className={styles.container}>
       
       <div className={styles['Header']}><Header /></div>
-      <div className={styles['ProgressBar']}> hi </div>
+      <div className={styles['ProgressBar']}></div>
       <div className={styles['main-card']}>{stepSwitch(step)}</div>
       { step === 1 && (<div className={styles['GetAnswersBanner']}> <GetAnswersBanner /> </div>)}
       <div className={styles['Footer']}><Footer /> </div>

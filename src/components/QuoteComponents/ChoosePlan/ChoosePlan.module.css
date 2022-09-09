@@ -248,7 +248,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .ListItemEnd {
@@ -261,7 +261,7 @@
 .Description {
     display: flex;
     justify-content: flex-start;
-    width: 20rem;
+    width: 17rem;
 }
 
 .Checkbox {

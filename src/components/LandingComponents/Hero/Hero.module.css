@@ -73,6 +73,7 @@
     background: #0076BD;
     border-radius: 25px;
     border-style: none;
+    cursor: pointer;
 
     /* Inside auto layout */
     flex: none;
