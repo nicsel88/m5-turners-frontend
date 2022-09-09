@@ -1,0 +1,96 @@
+.container {
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: 10vh 10vh;
+    grid-template-areas: 
+    "accent accent accent"
+    ". progress ."
+    ;
+    font-family: poppins;
+}
+.top-accent-1 {
+    grid-area: accent;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 25%;
+    border-top: 2px solid #0076BD;
+}
+.top-accent-2 {
+    grid-area: accent;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    border-top: 2px solid #0076BD;
+}
+.top-accent-3 {
+    grid-area: accent;
+    position: relative;
+    top: 0;
+    left: 0;
+    grid-area: accent;
+
+    width: 90%;
+    border-top: 2px solid #0076BD;
+}
+
+.progress-container {
+    grid-area: progress;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+}
+
+.progress-location-active {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: #565E69;
+}
+.progress-container-spacer-active {
+    margin: 1rem;
+    width: 95%;
+    border: 2px solid #0076BD;
+}
+.circle-active {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background:#0076BD;
+
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-location-inactive {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    color: #414750;
+}
+.progress-container-spacer-inactive {
+    margin: 1rem;
+    width: 95%;
+    border: 2px solid #E0E2E5;
+}
+.circle-inactive {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    background:#E0E2E5;
+
+    color: #414750;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

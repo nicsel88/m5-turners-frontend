@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/QuoteComponents/Header/Header.jsx'
+import ProgressBar from '../../components/QuoteComponents/ProgressBar/ProgressBar.jsx'
 import FindYourCar from '../../components/QuoteComponents/FindYourCar/FindYourCar.jsx'
 import Driver from '../../components/QuoteComponents/Driver/Driver.jsx'
 import ChoosePlan from '../../components/QuoteComponents/ChoosePlan/ChoosePlan.jsx'
@@ -52,7 +53,7 @@ const Quote = ({ setQuoteData }) => {
     <div className={styles.container}>
       
       <div className={styles['Header']}><Header /></div>
-      <div className={styles['ProgressBar']}></div>
+      <div className={styles['ProgressBar']}><ProgressBar step={step}/></div>
       <div className={styles['main-card']}>{stepSwitch(step)}</div>
       { step === 1 && (<div className={styles['GetAnswersBanner']}> <GetAnswersBanner /> </div>)}
       <div className={styles['Footer']}><Footer /> </div>
