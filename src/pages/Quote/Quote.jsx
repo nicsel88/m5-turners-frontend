@@ -29,6 +29,7 @@ const Quote = ({ setQuoteData }) => {
     await axios.post('http://localhost:8080/insurancequotecalculator', data)
       .then((response) => {
         setQuoteData(response.data)
+        window.localStorage.setItem('quoteData', JSON.stringify(response.data));
       })
       .catch((error) => {console.log(error)})
   }

@@ -8,9 +8,11 @@ import styles from './Summary.module.css'
 
 
 
-const Summary = ({quoteData}) => {
+const Summary = () => {
 
-console.log(quoteData.d1firstname);
+  let quoteData = JSON.parse(window.localStorage.getItem("quoteData"));
+
+  console.log(quoteData);
 
   const handleCheckout = async () => {
 
@@ -23,7 +25,7 @@ console.log(quoteData.d1firstname);
 
     console.log(quoteData.excess);
 
-    //var itemsArray = [{id: quoteData.plan, excess: quoteData.excess, value: quoteData.value}];
+    var itemsArray = [{id: quoteData.plan, excess: quoteData.excess, value: quoteData.value}];
 
     for(var i=0; i<3; i++) {
      if(quoteData.extras[i] ==true) {
