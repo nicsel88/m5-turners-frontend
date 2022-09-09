@@ -17,6 +17,8 @@
     height: 46px;
     left: 38.7rem;
     bottom: 6.5rem;
+
+    cursor:pointer;
 }
 
 .checkout {
@@ -44,4 +46,5 @@
     order: 2;
     flex-grow: 0;
     
+    cursor:pointer;
 }

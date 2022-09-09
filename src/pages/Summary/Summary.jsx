@@ -25,13 +25,17 @@ const Summary = () => {
 
     console.log(quoteData.excess);
 
-    var itemsArray = [{id: quoteData.plan, excess: quoteData.excess, value: quoteData.value}];
+    quoteData.quote = parseInt(quoteData.quote);
+
+    var itemsArray = [{id: parseInt(quoteData.plan), excess: parseInt(quoteData.excess), value: parseInt(quoteData.value)}];
 
     for(var i=0; i<3; i++) {
      if(quoteData.extras[i] ==true) {
        itemsArray.push({id: i+4})
      }
     }
+
+    // console.log(itemsArray);
 
     // 1. Make request to server at the URL you create
     await fetch("http://localhost:8080/checkout/pay", { // URL of server (Azure deploy) (client and server are on different URLs). Can add this to env variable so I only need to change it in one place.
@@ -42,15 +46,12 @@ const Summary = () => {
     
     // 2. Send along the id and quantity of items you want to buy (based on planItems map in CheckoutController.js)
         body: JSON.stringify({
-            items: [
-              { id: 2, excess: quoteData.excess, value: quoteData.value }, //choosing Comprehensive plan.
-              { id: 4 }, //choosing bonus cover: mech breakdown.
-              { id: 6 }
-          ],
+            items: itemsArray,
             customer: {
                 name: quoteData.d1firstname + " " + quoteData.d1lastname,
-                email: quoteData.email
+                email: quoteData.email,
             },
+            quote: quoteData.quote,
         }), // Code block below: gets URL response back from server, and send user to that URL
 
 
@@ -77,6 +78,16 @@ const Summary = () => {
 
   const handleQuote = async () => {
 
+    quoteData.quote = parseInt(quoteData.quote);
+
+    var itemsArray = [{id: parseInt(quoteData.plan), excess: parseInt(quoteData.excess), value: parseInt(quoteData.value)}];
+
+    for(var i=0; i<3; i++) {
+     if(quoteData.extras[i] ==true) {
+       itemsArray.push({id: i+4})
+     }
+    }
+
     // Next step: Integrate client and server
     // Make request to server to get URL to checkout page.
     // How stripe works: 
@@ -93,15 +104,12 @@ const Summary = () => {
     
     // 2. Send along the id and quantity of items you want to buy
         body: JSON.stringify({
-            items: [
-                { id: 2, excess: quoteData.excess, value: quoteData.value }, //choosing Comprehensive plan.
-                { id: 4 }, //choosing bonus cover: mech breakdown.
-                { id: 6 }
-            ],
+            items: itemsArray,
             customer: {
                 name: quoteData.d1firstname + " " + quoteData.d1lastname,
                 email: quoteData.email
             },
+            quote: quoteData.quote,
         }), // Code block below: gets URL response back from server, and send user to that URL
     })
 
