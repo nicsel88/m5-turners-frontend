@@ -1,11 +1,13 @@
 import React from 'react'
 import styles from './ChoosePlan.module.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import bluecheck from '../../../images/blue-check.png'
 import greycheck from '../../../images/grey-check.png'
 import wrench from '../../../images/wrench.png';
 import briefcase from '../../../images/briefcase.png';
 import creditcard from '../../../images/credit-card.png';
+import dots from '../../../images/dots.png'
 
 const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
   const [plan, setPlan] = useState(2);
@@ -250,10 +252,11 @@ const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
                   <div>{extra.number}</div>
                   <div><img src={extra.image}/></div>
                   <div className={styles.Description}>{extra.description}</div>
+                  <div>{extra.price}</div>
                 </div>
                 <div className={styles.ListItemEnd}>
-
-
+                  <div><img src={dots} /></div>
+                  <div>learn more</div>
                 </div>
               </li>
             )
@@ -261,7 +264,7 @@ const ChoosePlan = ({ setStep, data, setData, handleSubmit }) => {
         </ul>
         <div className={styles.ButtonLine}>
           <div className={styles.Button} onClick={() => setStep((prev) => prev - 1)}>Back</div>
-          <div className={styles.ActiveButton} onClick={() => handleSubmit()}>Next</div>
+          <Link to={"/summary"} className={styles.ActiveButton} onClick={() => handleSubmit()}>Next</Link>
         </div>
       </div>
     </div>

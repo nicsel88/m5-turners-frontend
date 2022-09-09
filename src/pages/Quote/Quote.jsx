@@ -9,6 +9,7 @@ import Footer from '../../components/QuoteComponents/Footer/Footer.jsx'
 import { useState } from 'react'
 import styles from './Quote.module.css'
 import axios from 'axios'
+import check from '../../images/smallwhitecheck.png'
 
 const Quote = ({ setQuoteData }) => {
   const [step, setStep] = useState(1)
@@ -30,6 +31,7 @@ const Quote = ({ setQuoteData }) => {
     await axios.post('http://localhost:8080/insurancequotecalculator', data)
       .then((response) => {
         setQuoteData(response.data)
+        window.localStorage.setItem('quoteData', JSON.stringify(response.data));
       })
       .catch((error) => {console.log(error)})
   }

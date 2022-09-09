@@ -10,15 +10,19 @@
     "footer footer footer"
     ;
 }
+
 .Header {
     grid-area: header;
     /* align-items: center; */
     /* background-color: grey; */
 }
+
 .ProgressBar {
     grid-area: progress;
+    align-items: center;
     /* background-color: green; */
 }
+
 .main-card {
     grid-area: card;
     /* background-color: brown; */

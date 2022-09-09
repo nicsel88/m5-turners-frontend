@@ -6,6 +6,9 @@ import apply from '../../../images/summary-page/apply-button.png';
 import car from '../../../images/summary-page/car.png';
 
 const QuoteCard = () => {
+
+  let quoteData = JSON.parse(window.localStorage.getItem("quoteData"));
+
     return (
       <div className={styles.background}>
           <div className={styles.quoteCard}>
@@ -15,11 +18,11 @@ const QuoteCard = () => {
                   <h4>Comprehensive Cover</h4>
                   <div className={styles.agreedValue}>
                     <p>Agreed Value:</p>
-                    <p>$9000</p>
+                    <p>${quoteData.value}</p>
                   </div>
                   <div className={styles.agreedValue}>
                     <p>Excess Fee:</p>
-                    <p>$500</p>
+                    <p>${quoteData.excess}</p>
                   </div>
                   <div className={styles.addOns}>
                     <p>Add-ons:</p>
@@ -45,15 +48,15 @@ const QuoteCard = () => {
                   <div className={styles.radio}>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="monthly" name="payPeriod" />
-                      <h4>Monthly</h4>
+                      <h4>${(quoteData.quote/12+5).toFixed(2)} /month</h4>
                     </div>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="quarterly" name="payPeriod" />
-                      <h4>Quarterly</h4>
+                      <h4>${(quoteData.quote/4+10).toFixed(2)} /quarter</h4>
                     </div>
                     <div className={styles.payPeriod}>
-                      <input type="radio" value="annually" name="payPeriod" />
-                      <h4>Annually</h4>
+                      <input type="radio" value="annually" name="payPeriod" checked />
+                      <label for = "annually"><h4><b>${(quoteData.quote).toFixed(2)} /year</b></h4></label>
                     </div>
                   </div>
                   
