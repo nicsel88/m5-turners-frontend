@@ -16,24 +16,13 @@ const Summary = () => {
 
   const handleCheckout = async () => {
 
-      // Next step: Integrate client and server
+    // Next step: Integrate client and server
     // Make request to server to get URL to checkout page.
     // How stripe works: 
     // Give info (ids of products, number of product to buy)
     // Gets pricing info back from server, gives unique URL to redirect user to checkout and pay.
     //Make fetch request to server to endpoint:
 
-    console.log(quoteData.excess);
-
-    quoteData.quote = parseInt(quoteData.quote);
-
-    var itemsArray = [{id: parseInt(quoteData.plan), excess: parseInt(quoteData.excess), value: parseInt(quoteData.value)}];
-
-    for(var i=0; i<3; i++) {
-     if(quoteData.extras[i] ==true) {
-       itemsArray.push({id: i+4})
-     }
-    }
 
     // console.log(itemsArray);
 
@@ -45,15 +34,7 @@ const Summary = () => {
         },
     
     // 2. Send along the id and quantity of items you want to buy (based on planItems map in CheckoutController.js)
-        body: JSON.stringify({
-            items: itemsArray,
-            customer: {
-                name: quoteData.d1firstname + " " + quoteData.d1lastname,
-                email: quoteData.email,
-            },
-            quote: quoteData.quote,
-        }), // Code block below: gets URL response back from server, and send user to that URL
-
+        body: JSON.stringify(quoteData), // Code block below: gets URL response back from server, and send user to that URL
 
     })
 
@@ -78,16 +59,6 @@ const Summary = () => {
 
   const handleQuote = async () => {
 
-    quoteData.quote = parseInt(quoteData.quote);
-
-    var itemsArray = [{id: parseInt(quoteData.plan), excess: parseInt(quoteData.excess), value: parseInt(quoteData.value)}];
-
-    for(var i=0; i<3; i++) {
-     if(quoteData.extras[i] ==true) {
-       itemsArray.push({id: i+4})
-     }
-    }
-
     // Next step: Integrate client and server
     // Make request to server to get URL to checkout page.
     // How stripe works: 
@@ -103,14 +74,7 @@ const Summary = () => {
         },
     
     // 2. Send along the id and quantity of items you want to buy
-        body: JSON.stringify({
-            items: itemsArray,
-            customer: {
-                name: quoteData.d1firstname + " " + quoteData.d1lastname,
-                email: quoteData.email
-            },
-            quote: quoteData.quote,
-        }), // Code block below: gets URL response back from server, and send user to that URL
+        body: JSON.stringify(quoteData), // Code block below: gets URL response back from server, and send user to that URL
     })
 
     // 3. Redirect user if it's a successful request.
