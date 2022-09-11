@@ -4,7 +4,9 @@ import { useState } from 'react'
 
 const Driver = ({ setStep, data, setData, handleChange }) => {
   const [gender, setGender] = useState('female');
+  const [gender2, setGender2] = useState('female');
   const [incidents, setIncidents] = useState(true);
+  const [incidents2, setIncidents2] = useState(true);
   const [driver2, setDriver2] = useState(false);
   // const [d1policyhold, setD1Policyhold] = useState(false);
   // const [d2policyhold, setD2Policyhold] = useState(false);
@@ -44,7 +46,7 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
           </div>
         </div>
         <div className={styles.InputLine}>
-          <label for="startdate">When do you want your policy to start?</label>
+          <label for="d1birthday">Date of birth?</label>
           <input
             type="date"
             className={styles.InputLine}
@@ -55,7 +57,7 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
         </div>
         <div className={styles.InputLine}>
           <label className={styles.MultiLine}>In the last 5 years, have you had any incidents involving damage or theft of a vehicle?</label>
-          <div id="d1incidents" className={styles.ToggleOverlay} value={gender}>
+          <div id="d1incidents" className={styles.ToggleOverlay} value={incidents}>
             <div className={incidents ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents(true); setData({ ...data, d1incidents: true }); }}>Yes</div>
             <div className={!incidents ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents(false); setData({ ...data, d1incidents: false }); }}>No</div>
           </div>
@@ -89,13 +91,13 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
             <div className={styles.Title}>Secondary Driver</div>
             <div className={styles.InputSection}>
               <div className={styles.InputLine}>
-                <label for="d1firstname">What is this driver's name?</label>
+                <label for="d2firstname">What is this driver's name?</label>
                 <div className={styles.InputGroup}>
                   <input
                     type="text"
                     placeholder="First name"
                     className="infoInput"
-                    name="d1firstname"
+                    name="d2firstname"
                     onChange={handleChange}
                     value={data.d1firstname}
                   />
@@ -103,7 +105,7 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
                     type="text"
                     placeholder="Last name"
                     className="infoInput"
-                    name="d1lastname"
+                    name="d2lastname"
                     onChange={handleChange}
                     value={data.d1lastname}
                   />
@@ -111,9 +113,9 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
               </div>
               <div className={styles.InputLine}>
                 <label>Gender?</label>
-                <div id="d1gender" className={styles.ToggleOverlay} value={gender}>
-                  <div className={gender === "female" ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setGender("female"); setData({ ...data, d1gender: 'female' }); }}>Female</div>
-                  <div className={gender !== "female" ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setGender("male"); setData({ ...data, d1gender: 'male' }); }}>Male</div>
+                <div id="d2gender" className={styles.ToggleOverlay} value={gender2}>
+                  <div className={gender2 === "female" ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setGender2("female"); setData({ ...data, d2gender: 'female' }); }}>Female</div>
+                  <div className={gender2 !== "female" ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setGender2("male"); setData({ ...data, d2gender: 'male' }); }}>Male</div>
                 </div>
               </div>
               <div className={styles.InputLine}>
@@ -121,24 +123,24 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
                 <input
                   type="date"
                   className={styles.InputLine}
-                  name="d1birthday"
+                  name="d2birthday"
                   onChange={handleChange}
-                  value={data.d1birthday}
+                  value={data.d2birthday}
                 />
               </div>
               <div className={styles.InputLine}>
                 <label className={styles.MultiLine}>In the last 5 years, have you had any incidents involving damage or theft of a vehicle?</label>
-                <div id="d1incidents" className={styles.ToggleOverlay} value={gender}>
-                  <div className={incidents ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents(true); setData({ ...data, d1incidents: true }); }}>Yes</div>
-                  <div className={!incidents ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents(false); setData({ ...data, d1incidents: false }); }}>No</div>
+                <div id="d2incidents" className={styles.ToggleOverlay} value={incidents2}>
+                  <div className={incidents2 ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents2(true); setData({ ...data, d2incidents: true }); }}>Yes</div>
+                  <div className={!incidents2 ? styles.OptionToggle1 : styles.OptionToggle2} onClick={() => { setIncidents2(false); setData({ ...data, d2incidents: false }); }}>No</div>
                 </div>
               </div>
               <div className={styles.InputLine}>
-                <label for="d1license">License</label>
-                <select id="d1license" name="d1license" onChange={handleChange}>
-                  <option value={data.d1license}>L1</option>
-                  <option value={data.d1license}>L2</option>
-                  <option value={data.d1license}>L3</option>
+                <label for="d2license">License</label>
+                <select id="d2license" name="d2license" onChange={handleChange}>
+                  <option value={data.d2license}>L1</option>
+                  <option value={data.d2license}>L2</option>
+                  <option value={data.d2license}>L3</option>
                 </select>
               </div>
             </div>
@@ -158,7 +160,7 @@ const Driver = ({ setStep, data, setData, handleChange }) => {
             {driver2 && (
               <>
                 <input type="checkbox" id="d2policyhold" name="d2policyhold" value="driver2" onChange={handleChange} />
-                <label for="d1policyhold"> Driver 2</label><br></br>
+                <label for="d2policyhold"> Driver 2</label><br></br>
               </>
             )}
           </div>
