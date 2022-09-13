@@ -1,30 +1,27 @@
 
-.background:before { /* insert image before the hero element */
-    content: '';
-    background: url('../../../images/summary-page/background.png') no-repeat center center/cover;
+.background { /* insert image before the hero element */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('../../../images/summary-page/background.png') no-repeat center/cover border-box border-box;
     height: 100%; /* of the parent container */
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     z-index: -1;
-
+    top: 20px;
 }
-
-.car img{
-    padding-top: 5.8rem;
-    padding-left: 28rem;
-}
-
 
 .quoteCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     box-sizing: border-box;
     position: relative;
-    width: 60%;
+    width: 85%;
     height: 50rem;
-    margin: auto;
+    margin: 75px 0 300px 0;
     top: 16vh;
-
     background: #F2F6FC;
     border: 2px solid #FFFFFF;
     box-shadow: 118px 242px 108px rgba(16, 38, 70, 0.02), 66px 136px 91px rgba(16, 38, 70, 0.05), 30px 61px 67px rgba(16, 38, 70, 0.09), 7px 15px 37px rgba(16, 38, 70, 0.1);
@@ -45,12 +42,27 @@
     color: #414750;
 }
 
+.Title {
+    width: 100%;
+}
 
 .container {
-    display: grid; /* display as a grid format */
-    grid-template-columns: repeat(2,1fr); /* display 3 columns, equal width. Fr is a flexible unit. */
-    grid-gap: 1.2rem; /* gap between each image */
+    display: flex;
+    width: 80%;
+    gap: 2rem;
+}
 
+.ContainerLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 2rem;
+}
+
+.ContainerRight {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 
 .card1 {
@@ -64,11 +76,10 @@
     padding: 20px;
     gap: 20px;
 
-    position: absolute;
-    width: 28rem;
-    height: 298px;
-    left: 120px;
-    top: 156px;
+    position: relative;
+    height: 330px;
+    
+    
 
     /* Gray/300 */
 
@@ -81,87 +92,39 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    font-size: 27.648px;
+    font-size: 1.7rem;
     line-height: 32px;
     /* identical to box height, or 116% */
     color: #14181F;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: auto;
 }
 
-.agreedValue {
+.CardContent {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 176px;
-    width: 400px;
-    height: 34px;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.agreedValue p {
+    width: 100%;
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-    color: #000000;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
-.addOns {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 140px;
-    width: 400px;
-    height: 34px;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.addOns p {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-    color: #000000;
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
-
-.card2 {
-    box-sizing: border-box;
+.CardCategories {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-size: 1.1rem;
+}
+
+.CardValues {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.1rem;
+}
+
+.card2 {
+    display: flex;
+    align-items: space-between;
     padding: 20px;
-    gap: 0.1rem;
-    position: absolute;
-    width: 28rem;
     height: 173px;
-    left: 119px;
-    top: 484px;
     border: 1px solid #B1B8D0;
     border-radius: 20px;
 }
@@ -173,9 +136,6 @@
     font-size: 28px;
     line-height: 40px;
     color: #DEA01E;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
     margin: auto;
     margin-left: 0.3rem;
 }
@@ -200,11 +160,7 @@
     display: flex;
     padding: 0px;
     gap: 5px;
-    width: 400px;
     height: 34px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .code p {
@@ -216,7 +172,6 @@
     color: #0076BD;
     flex: none;
     order: 0;
-    flex-grow: 0;
 }
 
 .copyApply {
@@ -224,11 +179,7 @@
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
-    width: 163px;
     height: 34px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
 }
 
 .copyApply button {
@@ -238,21 +189,19 @@
     align-items: center;
     padding: 5px 10px;
     gap: 5px;
-    width: 80px;
     height: 34px;
-    cursor:pointer;
+    border: none;
+    background: #F2F6FC;
+    cursor: pointer;
 }
 
 .card3 {
     box-sizing: border-box;
-    position: absolute;
-    width: 25rem;
+    width: 100%;
     height: 499px;
-    left: 585px;
-    top: 158px;
     border: 1px solid #B1B8D0;
     border-radius: 20px;
-    margin-left: 0.8rem;
+    
 }
 
 .radio {
@@ -260,9 +209,8 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 3rem;
-    gap: 10px;
+    gap: 3rempx;
     position: absolute;
-
 }
 
 .payPeriod {
@@ -272,7 +220,6 @@
     padding-top: 1rem;
     align-items: center;
     gap: 3rem;
-    width: 529px;
     height: 72px;
 }
 
@@ -300,67 +247,69 @@
     margin: 0rem;
 }
 
-.card3 button {
+.checkout {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    width: 120px;
-    height: 40px;
-
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 15rem;
+    height: 2.5rem;
+    align-self: center;
     color: #FFFFFF;
     background: #0076BD;
     border-radius: 25px;
     border-style: none;
+    cursor: pointer;
+    margin-top: 5rem;
+    padding: 0.5rem 1.5rem;
+}
 
-    position: absolute;
-    width: 225px;
-    height: 46px;
-    left: 5rem;
-    bottom: 2rem;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-    cursor:pointer;
+.BottomBanner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 80%;
+    bottom: 30px;
     
 }
 
+.needTime {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 1rem;
+    bottom: 75px;
+}
+
 .needTime h4 {
-    color: #0076BD;
+    position: relative;
+    color: white;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 1.3rem;
     line-height: 32px;
     margin: 0rem;
-    position: absolute;
-    left: 37.2rem;
-    bottom: 10.4rem;
-
 }
 
-.needTime button {
+.quote {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    width: 120px;
-    height: 40px;
-
-    color: #FFFFFF;
-    background: #0076BD;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 20rem;
+    height: 2.7rem;
+    align-self: center;
+    color: #0076BD;
+    background: white;
     border-radius: 25px;
     border-style: none;
-
-    position: absolute;
-    width: 225px;
-    height: 46px;
-    left: 38.7rem;
-    bottom: 6.5rem;
-
-    cursor:pointer;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
 }

@@ -278,18 +278,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
     width: 8rem;
     height: 2rem;
     color: #0076BD;
     border: 1.4px solid #0076BD;
     border-radius: 25px;
     cursor: pointer;
+    padding: 0.5rem 1.5rem;
 }
 
 .ActiveButton {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
     width: 8rem;
     height: 2rem;
     color: white;
@@ -297,4 +300,6 @@
     border: 1.4px solid #0076BD;
     border-radius: 25px;
     cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
 }

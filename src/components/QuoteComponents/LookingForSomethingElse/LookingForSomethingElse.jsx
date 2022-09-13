@@ -11,15 +11,29 @@ const LookingForSomethingElse = () => {
       <div className={styles.somethingElse}>
           <h3>Looking for something else?</h3>
           <div className={styles.container}>
-              <img src={auction} alt='auction hammer' />
-              <img src={boat} alt='sailing boat' />
-              <img src={tradeIn} alt='car key' />
-              <img src={carSubscriptions} alt='car' />
-              <h4>Car auctions</h4>
-              <h4>Boats & trucks</h4>
-              <h4>Trade in</h4>
-              <h4>Car subscriptions</h4>
+            <div className={styles.ImageRow}>
+              <div className={styles.Item}>
+                <img src={auction} alt='auction hammer' />
+                <h4>Car auctions</h4>
+              </div>
+              <div className={styles.Item}>
+                <img src={boat} alt='sailing boat' />
+                <h4>Boats & trucks</h4>
+              </div>  
+              <div className={styles.Item}>
+                <img src={tradeIn} alt='car key' />
+                <h4>Trade in</h4>
+              </div>
+              <div className={styles.Item}>
+                <img src={carSubscriptions} alt='car' />
+                <h4>Car subscriptions</h4>
+              </div>  
+            </div>
           </div>
+              
+              
+              
+              
      </div>
     )
   }

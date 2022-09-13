@@ -1,16 +1,16 @@
 .hero {
     font-family: poppins;
-    height: 60vh;
+    height: 80vh;
     width: 100%;
     position: relative; /* important because there will be an image  */
-    margin-bottom: 12rem;
+    /* margin-bottom: 12rem; */
     top: 8vh;
 
 }
 
 .hero:before { /* insert image before the hero element */
     content: '';
-    background: url('../../../images/success-page/success-hero.png') no-repeat center center/cover;
+    background: url('../../../images/success-page/success-hero.png') no-repeat center center/contain;
     height: 100%; /* of the parent container */
     width: 100%;
     position: absolute;
@@ -23,7 +23,7 @@
 
     box-sizing: border-box;
     position: absolute;
-    width: 55%;
+    width: 50%;
     height: 50%;
     left: calc(50% - 55%/2);
     top: 8rem;
@@ -33,8 +33,8 @@
     
 }
 
-.overlay img {
-    padding-top: 1rem;
+.overlay > img {
+    padding-top: 2rem;
 }
 
 .overlay h3 {
