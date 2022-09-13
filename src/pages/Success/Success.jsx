@@ -15,7 +15,7 @@ const Success = ({quoteData}) => {
   console.log(quoteData);
   return (
     <div>
-    {/* <Navbar /> */}
+    <Navbar />
     <ThankYou />
     <LookingForSomethingElse />
     <FooterSuccess />

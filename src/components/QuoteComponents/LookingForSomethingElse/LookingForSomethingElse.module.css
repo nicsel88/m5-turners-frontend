@@ -1,46 +1,40 @@
 .somethingElse {
-    width: 80%;
-    margin: 4rem 0; /* 4rem top/bottom, 0 on left/right */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     text-align: center;
     position: relative;
-    height: 60vh;
-    /* height: 40rem; */
-    left: calc(50% - 80%/2);
-
-
 }
 
 .container {
     /* Frame 147 */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px;
-
-
-width: 100%;
-position: absolute;
-height: 441px;
-
-
-display: grid; /* display as a grid format */
-grid-template-columns: repeat(4,1fr); /* display 3 columns, equal width. Fr is a flexible unit. */
-grid-gap: 0 4rem; /* gap between each image */
-padding: 1rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    height: 70vh;
 }
 
+.ImageRow {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
 
-
-.container img {
-    width: 100%;
+.ImageRow > img {
+    width: 20%;
     filter: drop-shadow(118px 242px 108px rgba(16, 38, 70, 0.02)) drop-shadow(66px 136px 91px rgba(16, 38, 70, 0.05)) drop-shadow(30px 61px 67px rgba(16, 38, 70, 0.09)) drop-shadow(7px 15px 37px rgba(16, 38, 70, 0.1)) drop-shadow(0px 0px 0px rgba(16, 38, 70, 0.1));
 }
 
+.Item {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
 
-
-.somethingElse h3 {
+.somethingElse > h3 {
    
     /* H3 */
     
@@ -48,17 +42,16 @@ padding: 1rem;
     font-style: normal;
     font-weight: 500;
     font-size: 39.81px;
-    line-height: 56px;
     /* identical to box height, or 141% */
     
     text-align: center;
     
     color: #0076BD;
+    margin: 70px 0 50px 0;
 }
 
 .container h4 {
 
-    padding: 0.1rem;
 
 
 /* h4 */
@@ -67,16 +60,10 @@ font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 27.648px;
-line-height: 32px;
 /* identical to box height, or 116% */
-
+margin: 0;
+align-self: flex-start;
 
 color: #414750;
 
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-flex-grow: 0;
 }
