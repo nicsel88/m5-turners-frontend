@@ -182,7 +182,7 @@ const QuoteCard = () => {
                     </div>
                     <div className={styles.payPeriod}>
                       <input type="radio" value="annually" name="payPeriod" checked />
-                      <label for = "annually"><h4><b>${(quoteData.quote).toFixed(2)} /year</b></h4></label>
+                      <label for = "annually"><h4><b>${quoteData.quote} /year</b></h4></label>
                     </div>
                     <button className={styles.checkout} onClick={handleCheckout}>Pay Now</button>
                   </div>

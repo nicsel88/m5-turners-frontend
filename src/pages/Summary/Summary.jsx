@@ -9,7 +9,6 @@ import styles from './Summary.module.css'
 
 
 const Summary = () => {
-
   return (
     <>
       <Header />

@@ -1,12 +1,9 @@
-Basic folder structure for Turners Insurance app. 
+Frontend UI for Turners insurance, deployed to Firebase hosting via Github Actions workflow with SonarCloud code analysis.
 
-Each compoent has its own folder within 'components' folder and corresponding subfolder broken down by pages with its own .jsx and .module.css. 
+This is a one-week collaboration of the "Air Jordans," our amazing Christchurch based team for the Mission Ready Advanced Software course.
 
-The 'pages' are just container components that will import all the different subcompoents. So you would do base styling for each 'page' and then pull in the subcompoents based on different conditions set in the page compoent. We'll route everything from the App.js base compoenent. 
+Payment functionality is currently disabled on deployed version. 
 
-In an app with a bunch of compoents I've found modular css to be helpful to avoid conflicts. Basically just write the css as usual and then import it in the corresponding component with (for example): 
-
-import styles from './Navbar.module.css';
-
-and then in the jsx render use: 
-<div className={styles.MenuItem}>
+Visit https://mission5-frontend.web.app/ to test out quote generating functionality through the frontend UI, or
+to run locally, just clone, 'npm install' and 'npm start' both this repo and "https://github.com/dbruner23/m5backend-azure-pipeline" in nodejs. 
+If you're keen to pay us... (lol, it's only a dummy account with Stripe API) just email and we can forward you .env keys. 
